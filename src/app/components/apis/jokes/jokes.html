@@ -1,0 +1,20 @@
+<section class="bg-dark text-white py-5 text-center">
+  <div class="container">
+    <h2 class="mb-4">¿Chiste rápido?</h2>
+
+    <button type="button" (click)="handleClick()" class="btn btn-outline-light mb-4">
+      Mostrar chiste
+    </button>
+
+    @if (info) {
+      <div class="joke-box bg-black p-4 rounded shadow-sm mx-auto" style="max-width: 600px;">
+        <p class="mb-2 fst-italic">"{{info.setup}}"</p>
+        <p class="fw-bold"> {{info.punchline}}</p>
+      </div>
+    }
+    @else {
+      <p class="antes">No hay chiste aún. ¡Haz clic en el botón!</p>
+    }
+
+  </div>
+</section>

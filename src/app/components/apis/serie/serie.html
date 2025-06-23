@@ -1,0 +1,67 @@
+<section class="bg-black text-white py-5 text-center">
+  <div class="container">
+    <h2 class="mb-4">Mis personajes favoritos de Rick and Morty</h2>
+    <p class="text-dark-emphasis mb-5">Estos son algunos de los personajes favoritos de mi serie favorita</p>
+
+    <div class="row justify-content-center g-4">
+
+     
+      @if (condicional2) {
+        @for (i of arreglo1; track $index) {
+          <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+            <div
+              class="personaje-card bg-dark text-white p-3 rounded shadow personaje-favorito h-100 d-flex flex-column align-items-center"
+              (mouseenter)="handleCardEnter(i.id)" (mouseleave)="handleCardLeave()"
+              style="cursor: pointer;"
+            >
+              <img [src]="i.image" [alt]="i.name" class="img-fluid rounded mb-3 shadow-sm w-100" />
+              <h5 class="mb-1">{{ i.name }}</h5>
+              <small>{{ i.species }} - {{ i.status }}</small>
+
+              @if (selectedCharacter === i.id ) {
+                <div class="more-info mt-3 text-start w-100">
+                  <p class="mb-1"><strong>Origen:</strong> {{ i.origin?.name }}</p>
+                  <p class="mb-1"><strong>Ubicación:</strong> {{ i.location?.name }}</p>
+                  <p class="mb-0"><strong>Género:</strong> {{ i.gender }}</p>
+                </div>
+              }
+            </div>
+          </div>
+        }
+      }
+
+      @if (condicional) {
+        @for (i of arreglo2; track $index) {
+          <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+            <div
+              class="personaje-card bg-dark text-white p-3 rounded shadow personaje-favorito h-100 d-flex flex-column align-items-center"
+              (mouseenter)="handleCardEnter(i.id)" (mouseleave)="handleCardLeave()"
+              style="cursor: pointer;"
+            >
+              <img [src]="i.image" [alt]="i.name" class="img-fluid rounded mb-3 shadow-sm w-100" />
+              <h5 class="mb-1">{{ i.name }}</h5>
+              <small class="text-muted">{{ i.species }} - {{ i.status }}</small>
+
+              @if (selectedCharacter === i.id ) {
+                <div class="more-info mt-3 text-start w-100">
+                  <p class="mb-1"><strong>Origen:</strong> {{ i.origin?.name }}</p>
+                  <p class="mb-1"><strong>Ubicación:</strong> {{ i.location?.name }}</p>
+                  <p class="mb-0"><strong>Género:</strong> {{ i.gender }}</p>
+                </div>
+              }
+            </div>
+          </div>
+        }
+      }
+      @else {}
+
+    </div>
+  
+
+
+    <div class="mt-5">
+      <button type="button" (click)="show1()" class="btn btn-outline-light me-2">Ver grupo 1</button>
+      <button type="button" (click)="showMore()" class="btn btn-outline-light">Ver grupo 2</button>
+    </div>
+  </div>
+</section>

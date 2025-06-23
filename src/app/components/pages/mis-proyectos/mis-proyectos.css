@@ -1,0 +1,11 @@
+.seccion1{
+    background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 1), transparent),
+     url(../../../../../ASSETS/textura1.png);
+}
+.seccion2{
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent),
+     url(../../../../../ASSETS/tex2.png);
+}
+
