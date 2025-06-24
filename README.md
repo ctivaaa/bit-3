@@ -34,4 +34,5 @@ Pagina que evidencia el uso de la API de Rick y Morty, donde presento cada perso
 [![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)](#)
 
 ---
-[LINK PARA EL REPOSITORIO](https://github.com/ctivaaa/bit-3)
+[Juan David Cuitiva Vivas](https://github.com/ctivaaa) 17/06/2025
+
